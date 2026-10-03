@@ -1,5 +1,5 @@
 /* ===== CONFIG: paste your Apps Script Web App URL below ===== */
-const GOOGLE_SCRIPT_URL = "";   // e.g. https://script.google.com/macros/s/XXXX/exec
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKa3VAdfC6_gcS59V3y7GFsEMEK8XRSdk5TSkkHc2YgfS8wvZyBa89cc7yEh_TBCQk/exec";   // e.g. https://script.google.com/macros/s/XXXX/exec
 const DEBUG_MODE = false;       // true = show technical details on screen
 const WEBSITE_SOURCE = "Attendance Website";
 /* ============================================================ */
