@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee Attendance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell narrow">
+  <header class="brand">
+    <img src="assets/logo.png" alt="Company logo" width="44" height="44" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo-fallback',textContent:'A'}))">
+    <div><h1>Employee Attendance</h1>
+    <p class="muted"><span id="date">--</span> &nbsp;<strong id="clock">--</strong></p></div>
+  </header>
+
+  <section class="card">
+    <p class="status"><span id="dot" class="dot"></span><span id="conn">Checking connection…</span></p>
+    <form id="form" autocomplete="off" novalidate>
+      <label for="name">Employee name</label>
+      <input id="name" placeholder="Enter employee name" required>
+      <label for="code">Employee code</label>
+      <input id="code" placeholder="EMP001" required>
+      <label for="type">Attendance type</label>
+      <select id="type"><option>Check In</option><option>Check Out</option></select>
+      <button id="btn" class="btn" type="submit">Mark attendance</button>
+    </form>
+    <div id="msg" class="msg" role="status" aria-live="polite" hidden></div>
+    <dl id="receipt" class="receipt" hidden></dl>
+  </section>
+  <p class="muted center"><a href="admin.html">Admin dashboard</a></p>
+  <pre id="debug" class="debug" hidden></pre>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attendance Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+  <header class="brand"><div class="logo-fallback">A</div>
+    <div><h1>Attendance dashboard</h1><p class="muted"><a href="index.html">Back to attendance page</a></p></div></header>
+
+  <section id="login" class="card narrow-card">
+    <form id="loginForm">
+      <label for="pass">Admin passcode</label>
+      <input id="pass" type="password" autocomplete="current-password" required>
+      <button class="btn" type="submit">Open dashboard</button>
+    </form>
+    <div id="loginMsg" class="msg" hidden></div>
+  </section>
+
+  <div id="app" hidden>
+    <div class="toolbar">
+      <button class="btn small" id="refresh">Refresh</button>
+      <button class="btn small ghost" id="test">Test Google Sheet connection</button>
+      <button class="btn small ghost" id="export">Export attendance</button>
+      <button class="btn small ghost" id="logout">Sign out</button>
+    </div>
+    <div id="testResult" class="msg" hidden></div>
+    <section class="cards" id="cards"></section>
+
+    <h2>Employee work count</h2>
+    <div class="scroll"><table id="work"><thead><tr><th>Employee</th><th>Code</th><th>Today</th><th>Working days</th><th>Records</th><th>Last attendance</th></tr></thead><tbody></tbody></table></div>
+
+    <h2>Attendance records</h2>
+    <div class="filters">
+      <input id="q" placeholder="Search name or code">
+      <select id="fEmp"><option value="">All employees</option></select>
+      <input id="fDate" type="date">
+      <select id="fType"><option value="">Check In / Out</option><option>Check In</option><option>Check Out</option></select>
+    </div>
+    <div class="scroll"><table id="log"><thead><tr><th>Employee</th><th>Code</th><th>Date</th><th>Time</th><th>Type</th><th>Source</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <pre id="debug" class="debug" hidden></pre>
+</main>
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
